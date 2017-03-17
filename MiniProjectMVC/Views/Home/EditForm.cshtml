@@ -1,0 +1,69 @@
+﻿@model MiniProjectMVC.Models.MainModel
+
+@{
+    ViewBag.Title = "EditForm";
+}
+<link href="~/css/bootstrap.min.css" rel="stylesheet" />
+<link href="~/css/bootstrap.css" rel="stylesheet" />
+<script src="~/js/bootstrap.min.js"></script>
+<script src="~/js/jquery-1.7.1.min.js"></script>
+<link href="~/css/myCss.css" rel="stylesheet" />
+<h2 style="text-align:center" class="text-shadow">EditForm</h2>
+
+@using(Html.BeginForm("EditForm","Home",FormMethod.Post,null))
+{
+   //--------------------Div For Form Control--------------------------------------// 
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+    <h3>Details</h3>
+            </div>
+        <div class="panel-body box-shadow">
+    <table class="table table-responsive">
+        <tr>
+            <td style="text-align:center">
+                <i class="glyphicon glyphicon-user"></i>
+                Name:
+                @Html.TextBoxFor(Model => Model.ModelMy.Name, string.Empty, new { @class="col-md-12 input-sm",data_message="required"})
+                @*@Html.ValidationMessageFor(model=>model.ModelMy.Name, string.Empty, new { @class="label label-danger"})*@
+            </td>
+        </tr>
+        <tr>
+            <td  style="text-align:center">
+                <i class="glyphicon glyphicon-envelope"></i>
+                Email:
+                @Html.TextBoxFor(Model => Model.ModelMy.Email, string.Empty, new { @class="col-md-12 input-sm"})
+                @Html.ValidationMessageFor(model => model.ModelMy.Email, string.Empty, new { @class="label label-danger"})
+            </td>
+        </tr>
+        
+        <tr>
+            <td  style="text-align:center">
+                <input type="submit" class="btn btn-success" id="btnUpdate" name="btnUpdate" value="Update" />
+                &nbsp;
+                    <span class="btn btn-danger" style="color:white;">
+                @Html.RouteLink("Cancel", new { Action="Index",Controller="Home",@class="btn btn-danger"})
+                        </span>
+            </td>
+        </tr>
+        <tr>
+            <td  style="text-align:center;color:red">
+                @if (Session["Error"] != null)
+                {
+                    @Session["Error"].ToString();
+                }
+            </td>
+        </tr>
+    </table>
+           </div>
+      </div>
+                </div>
+            <div class="col-md-3"></div>
+            </div>
+        </div>
+</div>
+}

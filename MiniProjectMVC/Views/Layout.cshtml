@@ -1,0 +1,47 @@
+﻿
+<link href="~/css/bootstrap.css" rel="stylesheet" />
+<link href="~/css/bootstrap.min.css" rel="stylesheet" />
+<script src="~/js/bootstrap.min.js"></script>
+<link href="~/css/myCss.css" rel="stylesheet" />
+<link href="~/css/myCss.css" rel="stylesheet" />
+<script src="~/jquery-1.11.0.min.js"></script>
+<link href="~/themes/bvalidator.theme.bootstrap.rc.css" rel="stylesheet" />
+<link href="~/themes/bvalidator.theme.bootstrap.rt.css" rel="stylesheet" />
+<link href="~/themes/bvalidator.theme.gray2.css" rel="stylesheet" />
+<link href="~/themes/bvalidator.theme.gray3.css" rel="stylesheet" />
+<link href="~/themes/bvalidator.theme.orange.css" rel="stylesheet" />
+<link href="~/themes/bvalidator.theme.postit.css" rel="stylesheet" />
+<link href="~/themes/bvalidator.theme.red.css" rel="stylesheet" />
+<link href="~/bvalidator.css" rel="stylesheet" />
+<script src="~/jquery.bvalidator.js"></script>
+<script src="~/jquery.bvalidator-yc.js"></script>
+
+   <div class="container-fluid">
+        <div class="row">
+            <br />
+          <ul class = "nav nav-tabs">
+           <li class="active">
+              @Html.RouteLink("Log In", new { Action="Index",Controller="LogIn", })
+           </li>
+           <li >
+              @Html.RouteLink("New Registration", new { Action="Index",Controller="Register", })
+          </li>
+          <li>
+            @Html.RouteLink("Forgot Password", new { Action="Index",Controller="Forgot"})
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <br />
+    <br />
+
+@RenderBody();
+
+ <div class="panel">
+        <div class=" panel  panel-primary" style="text-align:center">
+            <div class="panel-heading" >
+                 &copy; Design by Pramod Kumar.
+                </div>
+             </div>
+            </div>

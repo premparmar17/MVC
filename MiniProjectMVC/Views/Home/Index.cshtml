@@ -1,0 +1,74 @@
+﻿@model MiniProjectMVC.Models.MainModel
+
+@{
+    ViewBag.Title = "Index";
+}
+<script src="~/js/jquery-1.7.1.min.js"></script>
+<link href="~/css/bootstrap.min.css" rel="stylesheet" />
+<link href="~/css/bootstrap.css" rel="stylesheet" />
+<script src="~/js/bootstrap.min.js"></script>
+<script src="~/js/jquery-1.7.1.min.js"></script>
+<link href="~/css/myCss.css" rel="stylesheet" />
+
+<h2 style="text-align:center;" class="text-shadow">Details</h2>
+@using(Html.BeginForm("LogOut","Home",FormMethod.Post,null))
+{
+    //--------------------------- Div For Form-Control -----------------------------//
+<div class="container" >
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-3"></div>
+            <div class="col-md-7">
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+    <h2>Hello! &nbsp;
+    @Session["name"].ToString()
+        </h2>
+            </div>
+        <div class="panel-body box-shadow">
+    <table class="table table-bordered table-hover table-responsive table-striped visible-phone" >
+        <tr >
+            <th class=" panel-success panel-heading">
+                Name:
+            </th>
+            <th class="panel-success panel-heading hidden-xs">
+                Email:
+            </th>
+            <th class=" panel-success panel-heading">
+                Action:
+            </th>
+        </tr>
+       @foreach (var item in Model.ModelDemo)
+       {
+           <tr>
+               <td >
+                   @item.name
+               </td>
+               <td class="hidden-xs">
+                   @item.email
+               </td>
+               <td >
+                   <i class="glyphicon glyphicon-wrench"></i>
+                    @Html.RouteLink("Edit", new { Action = "GridEdit", Controller = "Home", id = item.id })
+
+                   &nbsp;
+                   <i class="glyphicon glyphicon-remove"></i>
+                   @Html.RouteLink("Delete", new { Action="GridDelete",Controller="Home",id=item.id})
+               </td>
+           </tr>
+       }
+
+    </table>
+             <br />
+          
+                @*<input type="submit" id="btnLogOut" class="btn btn-danger" name="btnLogOut" value="LogOut" />*@
+            <button type="submit"id="btnLogOut" class="btn btn-danger" name="btnLogOut" value="LogOut"><i class="glyphicon glyphicon-log-out"></i> LogOut</button>
+            
+        </div>
+    </div>
+                </div>
+            <div class="col-md-3"></div>
+            </div>
+        </div>
+</div>
+}

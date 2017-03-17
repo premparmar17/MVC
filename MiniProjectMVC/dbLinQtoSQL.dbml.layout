@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="dbLinQtoSQL">
+  <DataContextMoniker Name="/dbLinQtoSQLDataContext" />
+  <nestedChildShapes>
+    <classShape Id="5e10ec99-5ad1-40b6-9a5c-b5bbdc6fd860" absoluteBounds="6.375, 2.25, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/dbLinQtoSQLDataContext/tblDemo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6d7ad72f-ed22-4e12-8a79-b17843f78a81" absoluteBounds="6.39, 2.71, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

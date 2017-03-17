@@ -1,0 +1,9 @@
+﻿.body {
+    background:url(~/bgimage/1.jpg); 
+}
+.box-shadow {
+    box-shadow:4px 4px 8px #ada9a9;
+}
+.text-shadow {
+    text-shadow:4px 4px 8px #ada9a9;
+}

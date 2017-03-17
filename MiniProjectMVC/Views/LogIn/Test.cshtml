@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "Test";
+    Layout = "~/Views/Layout.cshtml";
+}
+<script src="~/jquery-1.11.0.min.js"></script>
+<link href="~/themes/bvalidator.theme.bootstrap.rc.css" rel="stylesheet" />
+<link href="~/themes/bvalidator.theme.bootstrap.rt.css" rel="stylesheet" />
+<link href="~/themes/bvalidator.theme.gray2.css" rel="stylesheet" />
+<link href="~/themes/bvalidator.theme.gray3.css" rel="stylesheet" />
+<link href="~/themes/bvalidator.theme.orange.css" rel="stylesheet" />
+<link href="~/themes/bvalidator.theme.postit.css" rel="stylesheet" />
+<link href="~/themes/bvalidator.theme.red.css" rel="stylesheet" />
+<link href="~/bvalidator.css" rel="stylesheet" />
+<script src="~/jquery.bvalidator.js"></script>
+<script src="~/jquery.bvalidator-yc.js"></script>
+<script type="text/javascript"> 
+    
+    // options for first instance
+    var options12 = {
+        classNamePrefix: 'bvalidator_red_'
+    };
+   
+    
+    $(document).ready(function () {
+        // note that order of these lines is important
+        $('#form12').bValidator(options12); // first instance
+
+    });
+    
+</script>
+
+<form id="form12" method="post">
+
+<h2>Test</h2>
+<input type="text" id="txtName" name="txtName" data-bvalidator="required" data-bvalidator-msg="Please Enter Name !" />
+     <input type="submit" id="btnSave" name="btnSave" value="Save" />
+    </form>
